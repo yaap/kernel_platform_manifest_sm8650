@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="google" fetch="https://android.googlesource.com" sync-c="true" sync-tags="false"/>
+    <remote name="nubia" fetch="https://github.com/aospa-nubia-sm8650" sync-c="true" sync-tags="false" revision="master"/>
+
+    <!-- Google GKI -->
+    <remove-project name="kernel/common"/>
+    <project name="kernel/common" path="kernel_platform/common" remote="google" revision="android14-6.1">
+        <linkfile dest=".source_date_epoch_dir" src="."/>
+    </project>
+
+    <!-- qcom-6.1 kernel -->
+    <remove-project name="kernel/qcom"/>
+    <project name="kernel_platform_qcom-kernel" path="kernel_platform/msm-kernel" remote="nubia">
+        <linkfile dest="kernel_platform/common/build.config.msm.pineapple" src="build.config.msm.pineapple"/>
+        <linkfile dest="kernel_platform/common/scripts/setlocalversion" src="scripts/setlocalversion"/>
+    </project>
+
+    <!-- ZTE kernel bits -->
+    <project name="zte_kernel_sources" path="zte_kernel_sources" remote="nubia">
+        <linkfile dest="external" src="external"/>
+
+        <linkfile dest="vendor/zte/kernelconfig" src="vendor/zte/kernelconfig"/>
+
+        <linkfile dest="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" src="kernel_platform/qcom/proprietary/devicetree"/>
+    </project>
+
+    <!-- qcom proprietary bits -->
+    <project name="vendor_qcom_proprietary" path="vendor/qcom/proprietary" remote="nubia"/>
+
+    <!-- Build -->
+    <remove-project name="kernel/build"/>
+    <project name="kernel_platform_build" path="kernel_platform/build/kernel" remote="nubia">
+        <linkfile dest="kernel_platform/build/build.sh" src="build.sh"/>
+        <linkfile dest="kernel_platform/build/build_abi.sh" src="build_abi.sh"/>
+        <linkfile dest="kernel_platform/build/build_test.sh" src="build_test.sh"/>
+        <linkfile dest="kernel_platform/build/build_utils.sh" src="build_utils.sh"/>
+        <linkfile dest="kernel_platform/build/build_abl.sh" src="build_abl.sh"/>
+        <linkfile dest="kernel_platform/build/build_module.sh" src="build_module.sh"/>
+        <linkfile dest="kernel_platform/build/all-variants.sh" src="all-variants.sh"/>
+        <linkfile dest="kernel_platform/build/brunch" src="brunch"/>
+        <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh"/>
+        <linkfile dest="kernel_platform/build/android" src="android"/>
+        <linkfile dest="kernel_platform/build/build-tools/path" src="build-tools/path"/>
+        <linkfile dest="kernel_platform/build/config.sh" src="config.sh"/>
+        <linkfile dest="kernel_platform/build/envsetup.sh" src="envsetup.sh"/>
+        <linkfile dest="kernel_platform/build/_setup_env.sh" src="_setup_env.sh"/>
+        <linkfile dest="kernel_platform/build/multi-switcher.sh" src="multi-switcher.sh"/>
+        <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh"/>
+        <linkfile dest="kernel_platform/WORKSPACE" src="kleaf/bazel.WORKSPACE"/>
+        <linkfile dest="kernel_platform/build/abi" src="abi"/>
+        <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis"/>
+    </project>
+
+    <!-- Build script -->
+    <project name="kernel_platform_script" path="kernel_platform/script" remote="nubia">
+        <linkfile dest="build.sh" src="build.sh"/>
+    </project>
+</manifest>
