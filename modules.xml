@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="modules" fetch="https://github.com/orgs/aospa-nubia-sm8650" sync-c="true" sync-tags="false" revision="master"/>
+    <remote name="modules" fetch="https://github.com/aospa-nubia-sm8650" sync-c="true" sync-tags="false" revision="master"/>
 
     <!-- audio-kernel -->
     <project name="vendor_qcom_opensource_audio-kernel-ar" path="vendor/qcom/opensource/audio-kernel" remote="modules">
