@@ -52,6 +52,15 @@
         <linkfile dest="vendor/qcom/defs/product-defs/vendor/mm_driver_product.mk" src="mm_driver_product.mk"/>
     </project>
 
+    <!-- mmrm-driver -->
+    <project name="vendor_qcom_opensource_mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" remote="modules">
+        <linkfile dest="vendor/qcom/defs/board-defs/vendor/mmrm_kernel_board.mk" src="mmrm_kernel_board.mk"/>
+        <linkfile dest="vendor/qcom/defs/product-defs/vendor/mmrm_kernel_product.mk" src="mmrm_kernel_product.mk"/>
+    </project>
+
+    <!-- mmrm-driver-test -->
+    <project name="vendor_qcom_opensource_mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver/test" remote="modules"/>
+
     <!-- eva-kernel -->
     <project name="vendor_qcom_opensource_eva-kernel" path="vendor/qcom/opensource/eva-kernel" remote="modules" >
         <linkfile dest="vendor/qcom/defs/board-defs/vendor/eva_kernel_board.mk" src="eva_kernel_board.mk"/>
