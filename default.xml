@@ -2,7 +2,9 @@
 <manifest>
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
-  <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="79b85907c909dc6278ced2692c07737e850bf5cb" upstream="refs/heads/uefi.lnx.4.0.r14-rel"/>
+  <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="79b85907c909dc6278ced2692c07737e850bf5cb" upstream="refs/heads/uefi.lnx.4.0.r14-rel">
+    <linkfile dest="bootable/bootloader/edk2" src="."/>
+  </project>
   <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="700d38827dcc97c2c30e8b78545d6a6e727a69c8" upstream="refs/heads/kernel.lnx.6.1.r2-rel">
     <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh"/>
     <linkfile dest="kernel_platform/build/build.sh" src="build.sh"/>
