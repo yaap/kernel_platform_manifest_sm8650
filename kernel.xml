@@ -5,7 +5,7 @@
 
     <!-- Google GKI -->
     <remove-project name="kernel/common"/>
-    <project name="kernel/common" path="kernel_platform/common" remote="google" revision="android14-6.1">
+    <project name="kernel/common" path="kernel_platform/common" remote="google" revision="android14-6.1.68_r00">
         <linkfile dest=".source_date_epoch_dir" src="."/>
     </project>
 
