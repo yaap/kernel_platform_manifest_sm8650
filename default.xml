@@ -30,7 +30,6 @@
     <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis"/>
     <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh"/>
   </project>
-  <!-- TODO: Pin our own kernel/common -->
   <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="39b2be2e32e4fa002c700e140e810eb6a8024c9e" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel">
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>
