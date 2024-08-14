@@ -35,6 +35,7 @@
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_module.h" src="core/rmnet_module.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
     </project>
 
     <!-- datarmnet-ext -->
