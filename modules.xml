@@ -73,6 +73,9 @@
         <linkfile dest="vendor/qcom/defs/product-defs/vendor/securemsm_kernel_product_board.mk" src="securemsm_kernel_product_board.mk"/>
     </project>
 
+    <!-- synx-kernel -->
+    <project name="vendor_qcom_opensource_synx-kernel" path="vendor/qcom/opensource/synx-kernel" remote="modules" />
+
     <!-- touch-drivers -->
     <project name="vendor_qcom_opensource_touch-drivers" path="vendor/qcom/opensource/touch-drivers" remote="modules">
         <linkfile dest="vendor/qcom/defs/board-defs/vendor/touch_driver_board.mk" src="touch_driver_board.mk"/>
