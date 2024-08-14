@@ -35,6 +35,7 @@
     <project name="vendor_qcom_opensource_datarmnet-ext" path="vendor/qcom/opensource/datarmnet-ext" remote="modules">
         <linkfile dest="vendor/qcom/defs/board-defs/vendor/datarmnet_ext_dlkm_vendor_board.mk" src="datarmnet_ext_dlkm_vendor_board.mk"/>
         <linkfile dest="vendor/qcom/defs/product-defs/vendor/datarmnet_ext_dlkm_vendor_product.mk" src="datarmnet_ext_dlkm_vendor_product.mk"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet/core/rmnet_mem.h" src="mem/rmnet_mem.h"/>
     </project>
 
     <!-- display-drivers -->
