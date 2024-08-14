@@ -30,6 +30,7 @@
         <linkfile dest="vendor/qcom/defs/board-defs/vendor/datarmnet_dlkm_vendor_board.mk" src="datarmnet_dlkm_vendor_board.mk"/>
         <linkfile dest="vendor/qcom/defs/product-defs/vendor/datarmnet_dlkm_vendor_product.mk" src="datarmnet_dlkm_vendor_product.mk"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_config.h" src="core/rmnet_config.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_hook.h" src="core/rmnet_hook.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_module.h" src="core/rmnet_module.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
