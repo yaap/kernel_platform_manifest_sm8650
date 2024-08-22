@@ -29,6 +29,9 @@
     <project name="vendor_qcom_opensource_datarmnet" path="vendor/qcom/opensource/datarmnet" remote="modules">
         <linkfile dest="vendor/qcom/defs/board-defs/vendor/datarmnet_dlkm_vendor_board.mk" src="datarmnet_dlkm_vendor_board.mk"/>
         <linkfile dest="vendor/qcom/defs/product-defs/vendor/datarmnet_dlkm_vendor_product.mk" src="datarmnet_dlkm_vendor_product.mk"/>
+
+        <!-- This is very dirty. The drivers want the headers to be in their source directories. -->
+        <!-- Either keep parity with CLO, or modify for a common include path. Not good.         -->
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_config.h" src="core/rmnet_config.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_hook.h" src="core/rmnet_hook.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_map.h" src="core/rmnet_map.h"/>
@@ -36,6 +39,48 @@
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
         <linkfile dest="vendor/qcom/opensource/datarmnet-ext/aps/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf/rmnet_config.h" src="core/rmnet_config.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf/rmnet_hook.h" src="core/rmnet_hook.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf/rmnet_map.h" src="core/rmnet_map.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf/rmnet_module.h" src="core/rmnet_module.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf_tether/rmnet_config.h" src="core/rmnet_config.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf_tether/rmnet_hook.h" src="core/rmnet_hook.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf_tether/rmnet_map.h" src="core/rmnet_map.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf_tether/rmnet_module.h" src="core/rmnet_module.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf_tether/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf_tether/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/perf_tether/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/sch/rmnet_config.h" src="core/rmnet_config.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/sch/rmnet_hook.h" src="core/rmnet_hook.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/sch/rmnet_map.h" src="core/rmnet_map.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/sch/rmnet_module.h" src="core/rmnet_module.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/sch/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/sch/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/sch/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/shs/rmnet_config.h" src="core/rmnet_config.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/shs/rmnet_hook.h" src="core/rmnet_hook.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/shs/rmnet_map.h" src="core/rmnet_map.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/shs/rmnet_module.h" src="core/rmnet_module.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/shs/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/shs/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/shs/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/wlan/rmnet_config.h" src="core/rmnet_config.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/wlan/rmnet_hook.h" src="core/rmnet_hook.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/wlan/rmnet_map.h" src="core/rmnet_map.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/wlan/rmnet_module.h" src="core/rmnet_module.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/wlan/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/wlan/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/wlan/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/offload/rmnet_config.h" src="core/rmnet_config.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/offload/rmnet_hook.h" src="core/rmnet_hook.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/offload/rmnet_map.h" src="core/rmnet_map.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/offload/rmnet_module.h" src="core/rmnet_module.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/offload/rmnet_descriptor.h" src="core/rmnet_descriptor.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/offload/rmnet_qmap.h" src="core/rmnet_qmap.h"/>
+        <linkfile dest="vendor/qcom/opensource/datarmnet-ext/offload/qmi_rmnet_i.h" src="core/qmi_rmnet_i.h"/>
     </project>
 
     <!-- datarmnet-ext -->
