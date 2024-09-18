@@ -2,28 +2,31 @@
 <manifest>
     <remote name="google" fetch="https://android.googlesource.com" sync-c="true" sync-tags="false"/>
     <remote name="op" fetch="https://github.com/op7675-kernel" sync-c="true" sync-tags="false" revision="master"/>
+    <remote name="op12dev" fetch="https://github.com/OnePlus-12-Development" sync-c="true" sync-tags="false" revision="lineage-21"/>
+    <remote name="yaap" fetch="https://github.com/YAAP" sync-c="true" sync-tags="false" revision="fourteen"/>
 
-    <!-- OGKI meme GKI -->
+    <!-- GKI -->
     <remove-project name="kernel/common"/>
-    <project name="kernel_common" path="kernel/common" remote="op">
+    <project name="kernel/common" path="kernel_platform/common" remote="google" revision="android14-6.1" depth="1" >
         <linkfile dest=".source_date_epoch_dir" src="."/>
     </project>
 
     <!-- qcom-6.1 kernel -->
     <remove-project name="kernel/qcom"/>
-    <project name="kernel_oneplus_sm7675" path="kernel_platform/msm-kernel" remote="op" revision="oneplus/sm7675_u_14.0.1_oneplus_ace3v">
+    <project name="kernel_oneplus_sm8650" path="kernel_platform/msm-kernel" remote="yaap" >
         <linkfile dest="kernel_platform/common/build.config.msm.pineapple" src="build.config.msm.pineapple"/>
+        <linkfile dest="kernel_platform/common/build.config.constants" src="build.config.constants"/>
         <linkfile dest="kernel_platform/common/scripts/setlocalversion" src="scripts/setlocalversion"/>
         <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE"/>
         <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
     </project>
 
     <!-- smth in oplus -->
-    <project name="kernel_vendor_oneplus_sm7675" path="vendor" remote="op">
+    <project name="kernel_oneplus_sm8650-modules" path="vendor" remote="yaap">
         <linkfile dest="kernel_platform/vendor" src="."/>
     </project>
-    <project name="kernel_platform_qcom" path="kernel_platform/qcom" remote="op"/>
-    <project name="kernel_platform_oplus" path="kernel_platform/oplus" remote="op">
+    <project name="kernel_platform_qcom_sm8650" path="kernel_platform/qcom" remote="yaap"/>
+    <project name="kernel_platform_oplus_sm8650" path="kernel_platform/oplus" remote="yaap">
         <linkfile dest="kernel_platform/build/kernel/oplus" src="bazel"/>
     </project>
 </manifest>
